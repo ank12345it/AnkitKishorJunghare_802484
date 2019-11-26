@@ -1,0 +1,49 @@
+.mar
+		     {
+			 margin-right:30px;
+		
+             }
+a:hover,a1:hover
+			 {
+			   background-color: darkkhaki;
+			 }
+.bg{
+	background-color: darkkhaki;
+}
+.navbar-custom {
+    color: #FFFFFF;
+    background-color: #CC3333;
+}
+.bg-secondary {
+	background-color:#ab10f27a!important;
+  }
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #17a2b8;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+.form-control {
+  display: block;
+  width: 348%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+label[_ngcontent-nsx-c1] {
+  display: inline-block;
+  margin-bottom: -2.5rem;
+}

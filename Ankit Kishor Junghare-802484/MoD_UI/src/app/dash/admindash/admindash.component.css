@@ -1,0 +1,26 @@
+.container {
+    max-width: 1390px;
+   
+}
+.jumbotron {
+    padding: 4rem 2rem;
+    height: 570px;
+}
+.table {
+    width: 80%;
+    margin-bottom: 1rem;
+    margin-left: 238px;
+    color: #212529;
+}
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #1768b8;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}

@@ -1,0 +1,32 @@
+<table  class="table" style="margin-top: -562px;
+position: relative;
+ left: 252px;    width: 72%;">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">User's Id</th>
+        <th scope="col">User's Name</th>
+        <th scope="col">User's Email</th>
+        <th scope="col">User's Contact</th>
+        <th scope="col">Block/Unblock</th>
+        <th scope="col">Delete USer</th>
+      </tr>
+    </thead>
+    
+    <tbody  *ngFor="let result of list let i=index">
+     
+      <tr *ngIf="!delete[i]" >
+        <th scope="row">{{result.user_Id}}</th>
+        <td scope="row">{{result.user_Name}}</td>
+        <td scope="row">{{result.user_Email}}</td>
+        <td scope="row">{{result.user_Mobile}}</td>
+        <!-- *ngIf="checkBlock(i)==0" -->
+        <td *ngIf="status[i]"><button  type="submit" class="btn btn-primary" (click)="BlockUser(i);">Block</button></td>
+        <td *ngIf="!status[i]"><button type="submit"  class="btn btn-danger" (click)="BlockUser(i);">UnBlock</button></td>
+        <td><button type="submit" (click)="DeleteUser(i);"> <i class="fa fa-trash" aria-hidden="true"></i></button></td>
+        <td scope="row"></td>
+      </tr>
+    
+    </tbody>
+  
+  </table>
+<router-outlet></router-outlet>

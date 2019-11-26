@@ -1,0 +1,97 @@
+<nav class="col-md-2 d-none d-md-block bg-light sidebar" style=" margin-top: -146px;
+position: relative;
+top: 245px;
+  ">
+
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+                <b>
+              <a class="nav-link active">
+                <span data-feather="home"></span>
+                Dashboard <span class="sr-only">(current)</span>
+              </a>
+              </b>
+            </li>
+            <li class="nav-item dropdown"  >
+                    <a class=" dropdown-toggle mar nav-link dropdown-toggle mar " data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false"> 
+                            <font color="Blue">User</font>    
+                    </a>
+                <div  class="dropdown-menu"  aria-labelledby="navbarDropdown">
+                        <button tyep="submit" class="dropdown-item " routerLink="listuser" > Users List </button>
+                        <div  class="dropdown-divider"></div>
+                        <a  class="dropdown-item" routerLink="Msignup"> Users Query </a>
+                        
+                </div>
+                        
+            </li>
+            <li class="nav-item dropdown"  >
+              <a class=" dropdown-toggle mar nav-link dropdown-toggle mar " data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false"> 
+                      <font color="Blue">Mentor</font>    
+              </a>
+          <div  class="dropdown-menu"  aria-labelledby="navbarDropdown">
+                  <button tyep="submit" class="dropdown-item " routerLink="listmentor" > Mentor's List </button>
+                  <div  class="dropdown-divider"></div>
+                  <a  class="dropdown-item" routerLink="Msignup"> Mentor's Query </a>
+                  
+          </div>
+                  
+      </li>
+      <li class="nav-item dropdown"  >
+        <a class=" dropdown-toggle mar nav-link dropdown-toggle mar " data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false"> 
+                <font color="Blue">Technology</font>    
+        </a>
+    <div  class="dropdown-menu"  aria-labelledby="navbarDropdown">
+            <button tyep="submit" class="dropdown-item " routerLink="listskills" > Skills's List </button>
+            <div  class="dropdown-divider"></div>
+            <a  class="dropdown-item" routerLink="addskills"> Skills's Add </a>
+            
+    </div>
+            
+</li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="bar-chart-2"></span>
+               Training
+              </a>
+            </li>
+            
+            <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <span data-feather="layers"></span>
+                    Payment
+                    </a>
+                  </li>
+          </ul>
+
+          
+          
+        </div>
+      </nav>
+
+
+<div class="container" style="max-width: 891px;">
+    <div class="jumbotron" style=" margin-right: -210px;">
+        
+    <!-- <h1 style="text-align: -webkit-center;">WELCOME TO Admin-DASHBOARD </h1>
+    <h4 style="text-align: -webkit-center;"><b>Hiii {{adminname}} , you have succesfully logged in.........</b></h4> -->
+    
+   <div *ngIf="num1==1" style="position: relative;
+   
+   left: 60px;">
+       
+    </div>
+   
+   
+   
+<!-- <div class="container">
+    <div class="row"> -->
+      
+      
+     
+    <!-- </div>
+  </div> -->
+</div>
+</div>
+
+<router-outlet></router-outlet>

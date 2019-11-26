@@ -1,0 +1,124 @@
+<nav  class="navbar navbar-expand-lg navbar-light bg-secondary navbar-custom">
+  <a  class="navbar-brand "  href="#" ><img src="..\assets\image\logo2.PNG" alt="Smiley face" width="150" height="60"></a>
+  <button  class="navbar-toggler"  type="button"  data-toggle="collapse"  data-target="#navbarSupportedContent"  aria-controls="navbarSupportedContent"  aria-expanded="false"  aria-label="Toggle navigation">
+  <span  class="navbar-toggler-icon"></span>
+  </button>
+<div  class="collapse navbar-collapse"  id="navbarSupportedContent">
+  <ul  class="navbar-nav mr-auto">
+      <li  class="nav-item active">
+      <a  class="nav-link" style="color:white;"  routerLink="home">Home <span  class="sr-only">(current)</span></a>
+      </li>
+      <li  class="nav-item dropdown" >
+        <button type="button" style="color:white;" class="btn  dropdown-toggle  nav-link dropdown-toggle  " data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false"> 
+      Courses
+      </button>
+      <div  class="dropdown-menu"  aria-labelledby="navbarDropdown">
+      <a  class="dropdown-item " href="#" routerLink="Jmentor"> JAVA </a>
+      <div  class="dropdown-divider"></div>
+      <a  class="dropdown-item" href="#"> .NET </a>
+      <div  class="dropdown-divider"></div>
+      <a  class="dropdown-item" href="#"> MACHINE LEARNING </a>
+      <div  class="dropdown-divider"></div>
+      <a  class="dropdown-item" href="#"> PYTHON </a>
+      <div  class="dropdown-divider"></div>
+      <a  class="dropdown-item" href="#"> C/C++ </a>
+     </div>
+      </li>
+        <li  class="nav-item active">
+          <a  class="nav-link" style="color:white;"  href="#">Trending <span  class="sr-only">(current)</span></a>
+          </li>
+            
+    </ul>
+          <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+           
+                <a class="btn btn-primary mar " routerLink="search"  href="" role="button" aria-expanded="false" ><i class="fa fa-search"></i>Search Mentor</a>
+              
+        </li>
+      <!-- <div *ngIf="checkTok()==0"> -->
+      <li  class="nav-item dropdown " *ngIf="checkTok()==0">
+        <button type="button" style="color:white;" class="btn btn-primary dropdown-toggle mar nav-link dropdown-toggle mar " data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false"> 
+      SIGN-UP
+      </button>
+      <div  class="dropdown-menu"  aria-labelledby="navbarDropdown">
+      <a  class="dropdown-item " routerLink="Usignup"> User Signup </a>
+      <div  class="dropdown-divider"></div>
+      <a  class="dropdown-item" routerLink="Msignup"> Mentor Signup </a>
+      
+      </div>
+      </li>
+      <li  class="nav-item  " *ngIf="checkTok()==0" >
+        <button type="button" routerLink="Userlog" style="color:white;" class="btn btn-primary  mar nav-link  " data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false"> 
+      LOG-IN
+      </button>
+<!--       
+      <div  class="dropdown-menu"  aria-labelledby="navbarDropdown" >
+      <a  class="dropdown-item" href="#" > User Login </a>
+      
+      <div  class="dropdown-divider"></div>
+      <a  class="dropdown-item"  routerLink="Mentorlog">Mentor Login </a>
+      <div  class="dropdown-divider"></div>
+      <a  class="dropdown-item" routerLink="Adminlog">Admin Login </a>
+      
+     
+      </div> -->
+      </li>
+      <li class="nav-item" *ngIf="checkTok()!=0">
+          <button type="button" class="btn btn-danger wrn-btn" (click)="logout()">Logout</button>
+
+      </li>
+    <!-- </div> -->
+   </ul>
+</div>
+</nav>
+<!-- <div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+        
+
+
+
+<section class="search-sec">
+    <div class="container">
+        <form action="#" method="post" novalidate="novalidate">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <label>Start-Date:</label>
+                            <input type="datetime-local" class="form-control search-slt" placeholder="Start-Date">
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <label>End-Date:</label>
+                            <input type="datetime-local" class="form-control search-slt" placeholder="End-Date">
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <label>Course:</label>
+                            <select class="form-control search-slt" id="exampleFormControlSelect1" aria-placeholder="Course">
+                                
+                                <option>Java</option>
+                                <option>.NET</option>
+                                <option>Machine Learning</option>
+                                <option>Python</option>
+                                <option>C/C++</option>
+                                
+                            </select>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                             <br>
+                             &nbsp;&nbsp;&nbsp;
+                            <button type="button" class="btn btn-danger wrn-btn">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+      </div>
+    </div>
+  </div>
+  
+</div> -->
+  <router-outlet></router-outlet>

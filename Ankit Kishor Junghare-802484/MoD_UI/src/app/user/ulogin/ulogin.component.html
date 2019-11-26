@@ -1,0 +1,47 @@
+<div class="container">
+<div class="jumbotron">
+    <form #frm="ngForm" >
+       
+
+      
+        <div class="form-group">
+            <h1>Login</h1>
+            <label for="email">
+              email:
+            </label>
+            <input type="text" name="email" class="form-control" [(ngModel)]="email" #emailUser=ngModel ngModel required pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+        </div>
+        <div class="alert alert-danger" *ngIf="emailUser?.touched && emailUser.errors?.required" >
+            
+             Email is required
+         </div>
+         <div class="alert-danger danger" *ngIf="emailUser?.touched && emailUser.errors?.pattern">
+            Email is invalid
+           </div> 
+
+           <div class="form-group">
+            <label for="password">
+              password:
+            </label>
+            <input type="text" name="pass" class="form-control" [(ngModel)]="first" [(ngModel)]="pwd" #passUser=ngModel ngModel required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
+        </div>
+        <div class="alert alert-danger" *ngIf="passUser?.touched && passUser.errors?.required" >
+            
+             password is required
+         </div>
+         <div class="alert-danger danger" *ngIf="passUser?.touched && passUser.errors?.pattern">
+            password is invalid
+           </div> 
+        <br>
+      <button type="submit" name="button" (click)="Login()" class="btn btn-success" [disabled]="frm.invalid">login</button>
+      <br>
+      <p class="message">Not registered? <a  style="cursor:pointer">Create an account</a></p>
+
+      <br>
+      <b></b>
+      </form>
+    {{msg}}
+   {{token|json}}
+</div>
+</div>
+{{frm.value|json}}

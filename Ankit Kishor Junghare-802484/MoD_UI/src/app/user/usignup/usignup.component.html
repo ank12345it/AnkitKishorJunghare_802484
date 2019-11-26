@@ -1,0 +1,73 @@
+<div class="container"  
+>
+  <div class="jumbotron">
+      <form #frm="ngForm">
+         <b><h3> SIGN-UP USER</h3></b>
+         <br>
+         <div class="form-group">
+          <label for="username">
+            Name:
+          </label>
+          <input type="text" name="username" class="form-control" #emailUser=ngModel [(ngModel)]="item.user_Name" >
+         </div>
+
+
+          <div class="form-group">
+              <label for="email">
+                email:
+              </label>
+              <input type="text" name="email" class="form-control" #emailUser=ngModel [(ngModel)]="item.user_Email" required pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+          </div>
+          <div class="alert alert-danger" *ngIf="emailUser?.touched && emailUser.errors?.required" >
+              
+               Email is required
+           </div>
+           <div class="alert-danger danger" *ngIf="emailUser?.touched && emailUser.errors?.pattern">
+              Email is invalid
+             </div> 
+             <div class="form-group">
+              <label for="usercontact">
+                Contact:
+              </label>
+              <input type="number" name="usercontact" class="form-control" #emailUser=ngModel [(ngModel)]="item.user_Mobile" >
+             </div>
+
+           <div class="form-group">
+             <label for="password">
+               password:
+             </label>
+             <input type="text" name="pass" class="form-control" [(ngModel)]="first" #passUser=ngModel [(ngModel)]="item.user_Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
+         </div>
+         <div class="alert alert-danger" *ngIf="passUser?.touched && passUser.errors?.required" >
+             
+              password is required
+          </div>
+          <div class="alert-danger danger" *ngIf="passUser?.touched && passUser.errors?.pattern">
+             password is invalid
+            </div> 
+
+            <div class="form-group">
+              <label for="re-password">
+                re-password:
+              </label>
+              <input type="text" name="c_pass" [(ngModel)]="second" class="form-control" #repassUser=ngModel ngModel required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
+          </div>
+          <div class="alert alert-danger" *ngIf="repassUser?.touched && repassUser.errors?.required" >
+              
+               password is required
+           </div>
+           <div class="alert-danger danger" *ngIf="repassUser?.touched && repassUser.errors?.pattern">
+              password is invalid
+             </div> 
+             <div class="alert-danger danger" *ngIf="repassUser?.touched && !check()">
+              password and repass shud be same
+             </div> 
+          <br>
+          
+        <button type="submit" name="button" (click)="Add()" class="btn btn-success" [disabled]="frm.invalid">Sign-up</button>
+      
+        </form>
+  </div>
+  </div>
+  {{response}}
+  <router-outlet></router-outlet>

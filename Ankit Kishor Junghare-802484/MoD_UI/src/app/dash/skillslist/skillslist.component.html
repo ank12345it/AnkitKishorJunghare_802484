@@ -1,0 +1,33 @@
+<table  class="table" style="margin-top: -562px;
+position: relative;
+ left: 252px;    width: 72%;">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Skill's Id</th>
+        <th scope="col">Skills's Name</th>
+        <th scope="col">Skills's TOC</th>
+        <th scope="col">Skills's Fees</th>
+        <th scope="col">Skills's Duration</th>
+         
+      </tr>
+    </thead>
+    
+    <tbody  *ngFor="let result of list let i=index">
+     
+      <tr>
+        <th scope="row">{{result.skill_Id}}</th>
+        <td scope="row">{{result.skill_Name}}</td>
+        <td scope="row">{{result.skill_Toc}}</td>
+        <td scope="row">{{result.skill_Fee}} Rs</td>
+        <td scope="row">{{result.skill_Duration}} Months</td>
+        <!-- *ngIf="checkBlock(i)==0" -->
+        <!-- <td *ngIf="status[i]"><button  type="submit" class="btn btn-primary" (click)="BlockUser(i);">Block</button></td>
+        <td *ngIf="!status[i]"><button type="submit"  class="btn btn-danger" (click)="BlockUser(i);">UnBlock</button></td>
+        <td><button type="submit" (click)="DeleteUser(i);"> <i class="fa fa-trash" aria-hidden="true"></i></button></td>
+        <td scope="row"></td> -->
+      </tr>
+    
+    </tbody>
+
+  </table>
+<router-outlet></router-outlet>

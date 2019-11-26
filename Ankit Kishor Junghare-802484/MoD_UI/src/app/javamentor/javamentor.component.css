@@ -1,0 +1,14 @@
+.star-rating {
+    line-height:32px;
+    font-size:1.25em;
+  }
+  
+  .star-rating .fa-star{color: yellow;}
+
+  .checked {
+    color: orange;
+  }
+  .cont-gap{
+      grid-column-gap:70px;
+  }
+ 
